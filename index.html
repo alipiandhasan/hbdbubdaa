@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Aliefia Gastrani Harian Fitri</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(255, 104, 164, .16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(255, 64, 135, .12),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #24121d,
+            #110b11 55%,
+            #090609
+        );
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-glow {
+    position: fixed;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+
+    background: rgba(255, 80, 150, .10);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+.glow-one {
+    top: -120px;
+    left: -100px;
+}
+
+.glow-two {
+    right: -120px;
+    bottom: -120px;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+    position: relative;
+
+    width: 100%;
+    max-width: 480px;
+    height: 100vh;
+
+    margin: auto;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress {
+    position: fixed;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 480px;
+
+    height: 3px;
+
+    background: rgba(255,255,255,.07);
+
+    z-index: 500;
+}
+
+.progress-bar {
+    width: 8.33%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff5798,
+            #ffb0cf
+        );
+
+    transition:
+        width .55s ease;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px 95px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform:
+        translateY(25px)
+        scale(.98);
+
+    filter: blur(5px);
+
+    transition:
+        opacity .65s ease,
+        transform .65s cubic-bezier(.22,1,.36,1),
+        filter .65s ease,
+        visibility .65s ease;
+}
+
+.page.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    filter: blur(0);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    font-size: clamp(34px, 9vw, 50px);
+    line-height: 1.08;
+
+    margin-bottom: 17px;
+}
+
+h2 {
+    font-size: clamp(28px, 7vw, 39px);
+    line-height: 1.12;
+
+    margin-bottom: 18px;
+}
+
+.name {
+    color: #ff9bc4;
+}
+
+.small-title {
+    margin-bottom: 12px;
+
+    color: #ff9bc4;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.message {
+    max-width: 400px;
+
+    margin: 0 auto;
+
+    color: #e5d7df;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.message strong {
+    color: #fff;
+}
+
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass {
+    padding: 26px 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius: 28px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.cover-photo {
+    display: block;
+
+    width: 210px;
+    height: 210px;
+
+    margin:
+        0 auto 28px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        4px solid
+        rgba(255,155,197,.55);
+
+    box-shadow:
+        0 0 0 10px
+        rgba(255,155,197,.07),
+
+        0 25px 60px
+        rgba(0,0,0,.45);
+}
+
+.cover-subtitle {
+    max-width: 360px;
+
+    margin:
+        0 auto 28px;
+
+    color: #d7c6cf;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    border: none;
+    outline: none;
+
+    padding:
+        14px 24px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7caf,
+            #ff4f91
+        );
+
+    color: #fff;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 32px
+        rgba(255,79,145,.25);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.btn:active {
+    transform: scale(.94);
+}
+
+.btn.secondary {
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+    position: fixed;
+
+    left: 50%;
+    bottom: 18px;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        calc(100% - 40px);
+
+    max-width: 440px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    z-index: 400;
+}
+
+.navigation button {
+    min-width: 105px;
+}
+
+#backBtn {
+    display: none;
+}
+
+
+/* =========================
+   REASONS
+========================= */
+
+.reason {
+    padding: 16px;
+
+    margin-top: 11px;
+
+    text-align: left;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    background:
+        rgba(255,255,255,.045);
+}
+
+.reason-title {
+    margin-bottom: 6px;
+
+    color: #ff9bc4;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.reason-text {
+    color: #d9ccd3;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MEMORY PHOTO
+========================= */
+
+.memory-photo {
+    display: block;
+
+    width: 100%;
+    max-width: 340px;
+
+    height: 260px;
+
+    margin:
+        5px auto 20px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.4);
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-box {
+    width: 100%;
+
+    margin: 14px 0;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #000;
+
+    box-shadow:
+        0 20px 55px
+        rgba(0,0,0,.45);
+}
+
+.video-box video {
+    display: block;
+
+    width: 100%;
+
+    max-height: 65vh;
+
+    background: #000;
+}
+
+.video-note {
+    color: #cbbbc4;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-control {
+    position: fixed;
+
+    top: 16px;
+    right: 16px;
+
+    width: 43px;
+    height: 43px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: #fff;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    z-index: 600;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.music-control.visible {
+    display: flex;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    opacity: 0;
+
+    animation:
+        floatHeart
+        linear
+        forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .5;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FIREWORK CANVAS
+========================= */
+
+.firework-canvas {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   SMALL SCREEN
+========================= */
+
+@media (max-height: 700px) {
+
+    .page {
+        padding-top: 20px;
+        padding-bottom: 82px;
+    }
+
+    .cover-photo {
+        width: 180px;
+        height: 180px;
+
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .message {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .memory-photo {
+        height: 210px;
+    }
+
+    .glass {
+        padding: 20px 16px;
+    }
+
+    .video-box video {
+        max-height: 60vh;
+    }
+}
+
+
+@media (max-height: 580px) {
+
+    .cover-photo {
+        width: 145px;
+        height: 145px;
+
+        margin-bottom: 15px;
+    }
+
+    .cover-subtitle {
+        margin-bottom: 17px;
+    }
+
+    .page {
+        padding-bottom: 70px;
+    }
+
+    .memory-photo {
+        height: 170px;
+    }
+
+    .video-box video {
+        max-height: 55vh;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+<!-- PROGRESS -->
+
+<div class="progress">
+    <div
+        class="progress-bar"
+        id="progressBar">
+    </div>
+</div>
+
+
+<!-- =========================
+     AUDIO
+========================= -->
+
+<audio
+    id="bgMusic"
+    loop
+    preload="auto">
+
+    <source
+        src="risk-it-all.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<audio
+    id="fireworksSound"
+    preload="auto">
+
+    <source
+        src="fireworks.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music-control"
+    id="musicControl"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+<!-- =========================
+     APP
+========================= -->
+
+<main class="app">
+
+
+<!-- =========================
+     PAGE 1
+========================= -->
+
+<section
+    class="page active"
+    id="page1">
+
+    <div class="content">
+
+        <img
+            src="lipkecil.jpg"
+            class="cover-photo"
+            alt="babylip">
+
+        <div class="small-title">
+            A Little Surprise For You
+        </div>
+
+        <h1>
+            FOR BUBBDA,<br>
+
+            <span class="name">
+                ALIEFIA GASTRANI<br>
+                HARIAN FITRI
+            </span>
+
+            🤍🤍
+        </h1>
+
+        <p class="cover-subtitle">
+            Ada sesuatu kecil yang Hisinn
+            buatt khusus buat bubbda...
+        </p>
+
+        <button
+            class="btn"
+            onclick="startSurprise()">
+
+            Buka Kejutan 💗
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 2
+========================= -->
+
+<section
+    class="page"
+    id="page2">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            Special Day
+        </div>
+
+        <h2>
+            Selamat Ulang Tahun,<br>
+
+            <span class="name">
+                Bubbda
+            </span>
+        </h2>
+
+        <p class="message">
+
+            Aliefia Gastrani Harian Fitri,
+            selamat ulang tahun yaa bubbda 🤍
+
+            <br><br>
+
+            Semoga di umur bubbda yang sekarang,
+            semua hal baik yang bubbda harapkan
+            bisa satu per satu datang.
+
+            <br><br>
+
+            Hisinn cuma mau bubbda selalu sehat,
+            selalu bahagia, dan selalu dikelilingi
+            orang-orang yang sayang sama bubbda.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 3
+========================= -->
+
+<section
+    class="page"
+    id="page3">
+
+    <div class="content">
+
+        <div class="small-title">
+            From Hisinn
+        </div>
+
+        <h2>
+            Alasan Hisin<br>
+
+            <span class="name">
+                Sayang Bubbda
+            </span>
+        </h2>
+
+
+        <div class="reason">
+
+            <div class="reason-title">
+                🤍 Karena Bubbda
+            </div>
+
+            <div class="reason-text">
+                Bubbda selalu punya cara sendiri
+                buat bikin Hisinn nyaman dan bahagia.
+            </div>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-title">
+                🫶 Karena Bubbda Spesial
+            </div>
+
+            <div class="reason-text">
+                Bubbda bukan cuma seseorang
+                yang Hisinn sayang,
+                tapi seseorang yang Hisinn anggap penting.
+            </div>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-title">
+                🤍 Karena Kita
+            </div>
+
+            <div class="reason-text">
+                Semua cerita, ketawa, masalah,
+                dan momen yang kita lewatin
+                bikin Hisinn makin sayang sama Bubbda.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 4
+========================= -->
+
+<section
+    class="page"
+    id="page4">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            Our Memory
+        </div>
+
+        <h2>
+            <span class="name">
+                Kita
+            </span>
+        </h2>
+
+        <img
+            src="kenangan.jpg"
+            class="memory-photo"
+            alt="Kenangan kita">
+
+        <p class="message">
+
+            Entah sudah berapa banyak momen
+            yang kita lewatin bareng.
+
+            <br><br>
+
+            Tapi setiap momen itu selalu punya
+            tempat sendiri di hati Hisinn.
+
+            <br><br>
+
+            Semoga nanti masih banyak cerita
+            yang bisa kita buat bareng lagi.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 5
+========================= -->
+
+<section
+    class="page"
+    id="page5">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            Another Surprise 🤭
+        </div>
+
+        <h2>
+            Bukan Cuma<br>
+
+            <span class="name">
+                Hisinn
+            </span>
+        </h2>
+
+        <p class="message">
+
+            Hehehe...
+            kali ini bukan cuma hisinn
+            yang ngucapin selamat ulang tahun
+            buat bubbda 🤭🤍
+
+            <br><br>
+
+            Ada beberapa makhluk lucu
+            yang juga mau ngucapin HBD
+            buat bubbda.
+
+            <br><br>
+
+            Tonton sampai selesai yaa 🐾🤍
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 6
+========================= -->
+
+<section
+    class="page"
+    id="page6">
+
+    <div class="content">
+
+        <div class="small-title">
+            From The Little Friends 🐾
+        </div>
+
+        <h2>
+            HBD Buat<br>
+
+            <span class="name">
+                Bubbda 🤍
+            </span>
+        </h2>
+
+
+        <div class="video-box">
+
+            <video
+                id="birthdayVideo"
+                controls
+                playsinline
+                preload="metadata">
+
+                <source
+                    src="hbd-hewan.mp4"
+                    type="video/mp4">
+
+                Browser kamu tidak
+                mendukung video HTML5.
+
+            </video>
+
+        </div>
+
+
+        <p class="video-note">
+
+            Hehehe...
+            ternyata banyak juga yang mau
+            ngucapin bubbda 🐾🤍
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 7
+========================= -->
+
+<section
+    class="page"
+    id="page7">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            A Song For You
+        </div>
+
+        <h2>
+            Lagu Spesial<br>
+
+            <span class="name">
+                Untuk Bubbda
+            </span>
+        </h2>
+
+        <p class="message">
+
+            Ada satu lagu yang Hisinn
+            pilih khusus buat bubbda.
+
+            <br><br>
+
+            <strong>
+                Bruno Mars - Risk It All
+            </strong>
+
+            🤍🤍
+
+            <br><br>
+
+            Semoga setiap kali bubbda
+            denger lagu ini,
+            bubbda inget sama Hisinn
+            dan semua perasaan yang
+            Hisinn punya buat bubbda.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 8
+========================= -->
+
+<section
+    class="page"
+    id="page8">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            My Wish For You
+        </div>
+
+        <h2>
+            Doa & Harapan<br>
+
+            <span class="name">
+                Buat Bubbda
+            </span>
+        </h2>
+
+        <p class="message">
+
+            Hisinn berdoa semoga bubbda
+            selalu diberikan kesehatan,
+            kebahagiaan, dan kemudahan
+            dalam setiap langkah.
+
+            <br><br>
+
+            Semoga semua impian bubbda
+            bisa tercapai satu per satu.
+
+            <br><br>
+
+            Dan semoga Hisinn masih bisa
+            terus ada di samping bubbda
+            untuk nemenin setiap prosesnya.
+
+            🤍🤍
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 9
+========================= -->
+
+<section
+    class="page"
+    id="page9">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            Home
+        </div>
+
+        <h2>
+            Rumah Ternyaman<br>
+
+            <span class="name">
+                Hisinn
+            </span>
+        </h2>
+
+        <p class="message">
+
+            Buat Hisinn,
+            rumah bukan cuma tentang tempat.
+
+            <br><br>
+
+            Rumah adalah seseorang yang
+            bisa bikin Hisinn merasa tenang,
+            nyaman, dan bisa jadi diri sendiri.
+
+            <br><br>
+
+            Dan entah kenapa,
+            Hisinn menemukan rasa itu
+            di Bubbda.
+
+            🤍🤍
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 10
+========================= -->
+
+<section
+    class="page"
+    id="page10">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            Please Remember This
+        </div>
+
+        <h2>
+            Pesan Penting<br>
+
+            <span class="name">
+                Buat Bubbda
+            </span>
+        </h2>
+
+        <p class="message">
+
+            Jangan pernah merasa bubbda
+            nggak cukup baik.
+
+            <br><br>
+
+            Jangan pernah ngerasa bubbda
+            nggak berharga.
+
+            <br><br>
+
+            Karena di mata Hisinn,
+            bubbda selalu punya tempat
+            yang spesial.
+
+            <br><br>
+
+            Jadi kalau suatu hari bubbda
+            lagi capek,
+            inget yaa...
+            Hisinn selalu sayang sama bubbda.
+
+            🤍🤍
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 11
+========================= -->
+
+<section
+    class="page"
+    id="page11">
+
+    <div class="content glass">
+
+        <div class="small-title">
+            My Promise
+        </div>
+
+        <h2>
+            Janji Hisinn<br>
+
+            <span class="name">
+                ke Bubbda
+            </span>
+        </h2>
+
+        <p class="message">
+
+            Hisinn nggak janji semuanya
+            bakal selalu sempurna.
+
+            <br><br>
+
+            Tapi Hisinn janji bakal selalu
+            berusaha buat ngerti,
+            menghargai,
+            dan menjaga perasaan bubbda.
+
+            <br><br>
+
+            Hisinn bakal tetap berusaha ada
+            selama bubbda masih mengizinkan
+            Hisinn buat ada.
+
+            🤍🤍
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 12
+========================= -->
+
+<section
+    class="page"
+    id="page12">
+
+    <div class="content">
+
+        <div class="small-title">
+            One Last Thing
+        </div>
+
+        <h1>
+
+            I Love You<br>
+
+            <span class="name">
+                So Much
+            </span>
+
+            🤍
+
+        </h1>
+
+        <p class="message">
+
+            Selamat ulang tahun sekali lagi,
+            Bubbda.
+
+            <br><br>
+
+            Terima kasih sudah hadir,
+            terima kasih sudah menjadi bagian
+            dari cerita Hisinn.
+
+            <br><br>
+
+            Semoga hari ini dan hari-hari
+            setelahnya selalu dipenuhi
+            kebahagiaan.
+
+            <br><br>
+
+            <strong>
+                Hisinn sayang banget sama Bubbda.
+            </strong>
+
+            🤍🤍🤍🤍🤍
+
+        </p>
+
+        <br>
+
+        <button
+            class="btn"
+            onclick="restartSurprise()">
+
+            Ulangi Dari Awal 💗
+
+        </button>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<div class="navigation">
+
+    <button
+        class="btn secondary"
+        id="backBtn"
+        onclick="previousPage()">
+
+        ← Kembali
+
+    </button>
+
+
+    <button
+        class="btn"
+        id="nextBtn"
+        onclick="nextPage()">
+
+        Lanjut →
+
+    </button>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   BASIC VARIABLES
+===================================================== */
+
+let currentPage = 1;
+
+const totalPages = 12;
+
+
+const music =
+    document.getElementById("bgMusic");
+
+const fireworksSound =
+    document.getElementById("fireworksSound");
+
+const birthdayVideo =
+    document.getElementById("birthdayVideo");
+
+const musicControl =
+    document.getElementById("musicControl");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const backBtn =
+    document.getElementById("backBtn");
+
+const nextBtn =
+    document.getElementById("nextBtn");
+
+
+/* =====================================================
+   MUSIC STATE
+===================================================== */
+
+/*
+    Ini penting.
+
+    Variabel ini menyimpan apakah musik
+    memang sedang dimainkan sebelum video.
+*/
+
+let musicWasPlayingBeforeVideo = false;
+
+
+/* =====================================================
+   CHANGE PAGE
+===================================================== */
+
+function changePage(pageNumber) {
+
+    if (
+        pageNumber < 1 ||
+        pageNumber > totalPages
+    ) {
+        return;
+    }
+
+
+    const oldPage =
+        document.getElementById(
+            `page${currentPage}`
+        );
+
+
+    const newPage =
+        document.getElementById(
+            `page${pageNumber}`
+        );
+
+
+    oldPage.classList.remove("active");
+
+
+    currentPage =
+        pageNumber;
+
+
+    newPage.classList.add("active");
+
+
+    updateNavigation();
+
+    updateProgress();
+
+
+    /*
+        Kalau meninggalkan halaman video,
+        video dihentikan.
+
+        Kalau pindah ke halaman 7 atau lebih,
+        Risk It All dipastikan nyala lagi.
+    */
+
+    if (
+        currentPage !== 6 &&
+        birthdayVideo
+    ) {
+
+        birthdayVideo.pause();
+
+
+        if (
+            currentPage >= 7 &&
+            music.paused
+        ) {
+
+            resumeMusic();
+
+        }
+
+    }
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+function nextPage() {
+
+    if (
+        currentPage < totalPages
+    ) {
+
+        changePage(
+            currentPage + 1
+        );
+
+    }
+}
+
+
+/* =====================================================
+   PREVIOUS
+===================================================== */
+
+function previousPage() {
+
+    if (
+        currentPage > 2
+    ) {
+
+        changePage(
+            currentPage - 1
+        );
+
+    }
+}
+
+
+/* =====================================================
+   NAVIGATION UI
+===================================================== */
+
+function updateNavigation() {
+
+    /*
+        Halaman 1:
+        tidak ada tombol navigasi.
+    */
+
+    if (
+        currentPage === 1
+    ) {
+
+        backBtn.style.display =
+            "none";
+
+        nextBtn.style.display =
+            "none";
+
+        return;
+    }
+
+
+    backBtn.style.display =
+        "block";
+
+
+    /*
+        Halaman terakhir:
+        tombol Lanjut hilang.
+    */
+
+    if (
+        currentPage === totalPages
+    ) {
+
+        nextBtn.style.display =
+            "none";
+
+    } else {
+
+        nextBtn.style.display =
+            "block";
+
+    }
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+function updateProgress() {
+
+    const percentage =
+        (
+            currentPage /
+            totalPages
+        ) * 100;
+
+
+    progressBar.style.width =
+        percentage + "%";
+}
+
+
+/* =====================================================
+   START SURPRISE
+===================================================== */
+
+function startSurprise() {
+
+    /*
+        Tampilkan tombol musik.
+    */
+
+    musicControl.classList.add(
+        "visible"
+    );
+
+
+    /*
+        Mulai Risk It All
+        dari awal.
+    */
+
+    music.currentTime = 0;
+
+
+    music.play()
+        .then(() => {
+
+            updateMusicButton();
+
+        })
+        .catch(() => {
+
+            updateMusicButton();
+
+        });
+
+
+    /*
+        Pindah ke halaman 2.
+    */
+
+    changePage(2);
+
+
+    /*
+        Petasan + visual fireworks.
+    */
+
+    playFireworks();
+
+
+    /*
+        Hati melayang.
+    */
+
+    startFloatingHearts();
+}
+
+
+/* =====================================================
+   FIREWORKS
+===================================================== */
+
+function playFireworks() {
+
+    /*
+        Suara petasan hanya sebagai overlay.
+
+        Risk It All TIDAK disentuh.
+    */
+
+    if (
+        fireworksSound
+    ) {
+
+        fireworksSound.currentTime = 0;
+
+        fireworksSound.play()
+            .catch(() => {});
+
+    }
+
+
+    /*
+        Visual fireworks.
+    */
+
+    createFirework();
+
+
+    setTimeout(
+        () => createFirework(),
+        350
+    );
+
+
+    setTimeout(
+        () => createFirework(),
+        750
+    );
+
+
+    setTimeout(
+        () => createFirework(),
+        1150
+    );
+
+
+    setTimeout(
+        () => createFirework(),
+        1600
+    );
+
+
+    setTimeout(
+        () => createFirework(),
+        2100
+    );
+}
+
+
+/* =====================================================
+   CREATE FIREWORK
+===================================================== */
+
+function createFirework() {
+
+    const canvas =
+        document.createElement(
+            "canvas"
+        );
+
+
+    canvas.className =
+        "firework-canvas";
+
+
+    document.body.appendChild(
+        canvas
+    );
+
+
+    const ctx =
+        canvas.getContext("2d");
+
+
+    canvas.width =
+        window.innerWidth;
+
+
+    canvas.height =
+        window.innerHeight;
+
+
+    const x =
+        Math.random() *
+        canvas.width;
+
+
+    const y =
+        80 +
+        Math.random() *
+        (
+            canvas.height *
+            .45
+        );
+
+
+    const particles = [];
+
+
+    const particleCount = 65;
+
+
+    for (
+        let i = 0;
+        i < particleCount;
+        i++
+    ) {
+
+        const angle =
+            (
+                Math.PI * 2 * i
+            ) /
+            particleCount;
+
+
+        const speed =
+            2 +
+            Math.random() * 5;
+
+
+        particles.push({
+
+            x: x,
+
+            y: y,
+
+            vx:
+                Math.cos(angle) *
+                speed,
+
+            vy:
+                Math.sin(angle) *
+                speed,
+
+            life: 1,
+
+            size:
+                1.5 +
+                Math.random() * 2.5,
+
+            hue:
+                Math.random() * 360
+
+        });
+
+    }
+
+
+    function animate() {
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+
+        let alive = false;
+
+
+        particles.forEach(
+            particle => {
+
+                if (
+                    particle.life <= 0
+                ) {
+                    return;
+                }
+
+
+                alive = true;
+
+
+                particle.x +=
+                    particle.vx;
+
+
+                particle.y +=
+                    particle.vy;
+
+
+                particle.vy +=
+                    0.035;
+
+
+                particle.life -=
+                    0.018;
+
+
+                ctx.beginPath();
+
+
+                ctx.arc(
+                    particle.x,
+                    particle.y,
+                    particle.size,
+                    0,
+                    Math.PI * 2
+                );
+
+
+                ctx.fillStyle =
+                    `hsla(
+                        ${particle.hue},
+                        100%,
+                        75%,
+                        ${particle.life}
+                    )`;
+
+
+                ctx.shadowBlur =
+                    14;
+
+
+                ctx.shadowColor =
+                    `hsla(
+                        ${particle.hue},
+                        100%,
+                        70%,
+                        .9
+                    )`;
+
+
+                ctx.fill();
+
+            }
+        );
+
+
+        if (alive) {
+
+            requestAnimationFrame(
+                animate
+            );
+
+        } else {
+
+            canvas.remove();
+
+        }
+
+    }
+
+
+    animate();
+}
+
+
+/* =====================================================
+   RESUME MUSIC
+===================================================== */
+
+function resumeMusic() {
+
+    /*
+        Fungsi khusus buat memastikan
+        Risk It All lanjut lagi.
+    */
+
+    if (!music) {
+        return;
+    }
+
+
+    music.play()
+        .then(() => {
+
+            updateMusicButton();
+
+        })
+        .catch(() => {
+
+            /*
+                Kalau browser menolak play,
+                tombol musik tetap bisa dipakai.
+            */
+
+            updateMusicButton();
+
+        });
+}
+
+
+/* =====================================================
+   TOGGLE MUSIC
+===================================================== */
+
+function toggleMusic() {
+
+    if (
+        music.paused
+    ) {
+
+        resumeMusic();
+
+    } else {
+
+        music.pause();
+
+        updateMusicButton();
+
+    }
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+function updateMusicButton() {
+
+    musicControl.textContent =
+        music.paused
+            ? "🔇"
+            : "🎵";
+}
+
+
+/* =====================================================
+   VIDEO START
+===================================================== */
+
+birthdayVideo.addEventListener(
+    "play",
+    function() {
+
+        /*
+            Ingat bahwa musik sebelumnya sedang nyala.
+        */
+
+        musicWasPlayingBeforeVideo =
+            !music.paused;
+
+
+        /*
+            Pause Risk It All.
+        */
+
+        music.pause();
+
+
+        updateMusicButton();
+
+    }
+);
+
+
+/* =====================================================
+   VIDEO PAUSE
+===================================================== */
+
+birthdayVideo.addEventListener(
+    "pause",
+    function() {
+
+        /*
+            Jangan langsung memainkan musik
+            setiap kali video di-pause.
+
+            Musik hanya dilanjutkan ketika:
+            1. video benar-benar selesai, atau
+            2. user sudah keluar dari halaman 6.
+        */
+
+        updateMusicButton();
+
+    }
+);
+
+
+/* =====================================================
+   VIDEO ENDED
+===================================================== */
+
+birthdayVideo.addEventListener(
+    "ended",
+    function() {
+
+        /*
+            VIDEO SELESAI.
+
+            Risk It All otomatis lanjut.
+        */
+
+        if (
+            musicWasPlayingBeforeVideo
+        ) {
+
+            resumeMusic();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+let heartsStarted = false;
+
+
+function startFloatingHearts() {
+
+    if (
+        heartsStarted
+    ) {
+        return;
+    }
+
+
+    heartsStarted = true;
+
+
+    setInterval(
+        createHeart,
+        1800
+    );
+}
+
+
+function createHeart() {
+
+    const heart =
+        document.createElement(
+            "div"
+        );
+
+
+    heart.className =
+        "heart";
+
+
+    heart.textContent =
+        Math.random() > .5
+            ? "🤍"
+            : "💗";
+
+
+    heart.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+    heart.style.fontSize =
+        (
+            13 +
+            Math.random() * 10
+        ) +
+        "px";
+
+
+    heart.style.animationDuration =
+        (
+            5 +
+            Math.random() * 4
+        ) +
+        "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => heart.remove(),
+        10000
+    );
+}
+
+
+/* =====================================================
+   RESTART
+===================================================== */
+
+function restartSurprise() {
+
+    /*
+        Stop video.
+    */
+
+    if (
+        birthdayVideo
+    ) {
+
+        birthdayVideo.pause();
+
+        birthdayVideo.currentTime = 0;
+
+    }
+
+
+    /*
+        Stop Risk It All.
+    */
+
+    music.pause();
+
+    music.currentTime = 0;
+
+
+    /*
+        Stop fireworks sound.
+    */
+
+    if (
+        fireworksSound
+    ) {
+
+        fireworksSound.pause();
+
+        fireworksSound.currentTime = 0;
+
+    }
+
+
+    /*
+        Hapus fireworks yang masih ada.
+    */
+
+    document
+        .querySelectorAll(
+            ".firework-canvas"
+        )
+        .forEach(
+            canvas =>
+                canvas.remove()
+        );
+
+
+    /*
+        Reset state video.
+    */
+
+    musicWasPlayingBeforeVideo =
+        false;
+
+
+    /*
+        Kembali ke halaman 1.
+    */
+
+    changePage(1);
+
+
+    /*
+        Sembunyikan tombol musik.
+    */
+
+    musicControl.classList.remove(
+        "visible"
+    );
+
+
+    updateMusicButton();
+}
+
+
+/* =====================================================
+   INITIAL
+===================================================== */
+
+updateNavigation();
+
+updateProgress();
+
+updateMusicButton();
+
+</script>
+
+</body>
+</html>
